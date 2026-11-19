@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sauna Wars 3D</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(255, 191, 71, .75), transparent 18%),
+        linear-gradient(135deg, #260900 0%, #8f1d09 48%, #160303 100%);
+      color: #fff2bd;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: repeating-linear-gradient(45deg, transparent 0 24px, rgba(255, 178, 79, .04) 24px 48px);
+      animation: drift 12s linear infinite;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(92vw, 850px);
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .eyebrow {
+      margin: 0 0 .15em;
+      color: #ffc766;
+      font: 700 1rem/1.2 "Trebuchet MS", sans-serif;
+      letter-spacing: .42em;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(4.2rem, 14vw, 9.5rem);
+      line-height: .78;
+      letter-spacing: -.055em;
+      text-shadow: 0 .07em 0 #6d1608, 0 .16em 0 #321008, 0 16px 28px #120400;
+      transform: scaleX(.92);
+    }
+    h1 span { display: block; }
+    h1 .three { color: #ff6b35; font-size: .58em; letter-spacing: .08em; }
+    .tagline {
+      margin: 1.7rem auto 1.4rem;
+      max-width: 650px;
+      font: 800 clamp(.95rem, 2.5vw, 1.25rem)/1.4 "Trebuchet MS", sans-serif;
+      letter-spacing: .12em;
+    }
+    .moves { display: flex; justify-content: center; gap: .7rem; flex-wrap: wrap; }
+    .moves span {
+      border: 2px solid #ffc766;
+      border-radius: 999px;
+      padding: .65rem 1rem;
+      font: 800 .82rem/1 "Trebuchet MS", sans-serif;
+      letter-spacing: .11em;
+      background: rgba(34, 8, 2, .72);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .28);
+    }
+    @keyframes drift { to { transform: translate(48px, 48px); } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">The steam rises. The rivalry begins.</p>
+    <h1>
+      <span>Sauna</span>
+      <span>Wars</span>
+      <span class="three">3D</span>
+    </h1>
+    <p class="tagline">Enter the hottest arena. Perfect your parry. Throw rival warriors through walls of wood and vapor.</p>
+    <div class="moves" aria-label="Game features">
+      <span>Perfect Parry</span>
+      <span>Steam Burst</span>
+      <span>Löyly Clash</span>
+    </div>
+  </main>
+</body>
+</html>
